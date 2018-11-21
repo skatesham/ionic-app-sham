@@ -4,11 +4,7 @@
 set -e
 
 # build
-ionic build
-
-# Delete old branch
-#git branch -D gh-pages
-#git push origin --delete gh-pages
+ionic build --prod
 
 # navigate into the build output directory
 cd www
