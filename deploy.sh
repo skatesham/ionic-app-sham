@@ -4,7 +4,7 @@
 set -e
 
 # build
-ionic build
+#ionic build
 
 # Delete old branch
 #git branch -D gh-pages
@@ -17,6 +17,7 @@ cd www
 # echo 'www.example.com' > CNAME
 
 git init
+git checkout -b gh-pages
 git add -A
 git commit -m 'deploy'
 
@@ -27,4 +28,4 @@ git commit -m 'deploy'
 git push -f git@github.com:skatesham/ionic-app-sham.git master:gh-pages
 
 cd -
-
+git checkout master
